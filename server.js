@@ -1,7 +1,17 @@
 const express = require("express");
 const connectDb = require("./src/config/database");
+const cookieParser = require("cookie-parser");
+// const jwt = require("jsonwebtoken");
+// const User = require("./models/User");
 
 const app = express();
+
+app.use(express.json());
+app.use(cookieParser());
+
+const routes = require("./src/routes/index");
+
+app.use('/api',routes);
 
 connectDb()
   .then(() => {
