@@ -55,8 +55,7 @@ requestRouter.post("/send/:status/:touserId", userAuth, async (req, res) => {
   }
 });
 
-requestRouter.post(
-  "/request/review/:status/:requestId",
+requestRouter.post("/review/:status/:requestId",
   userAuth,
   async (req, res) => {
     try {
