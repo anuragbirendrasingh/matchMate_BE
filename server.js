@@ -1,8 +1,7 @@
 const express = require("express");
 const connectDb = require("./src/config/database");
 const cookieParser = require("cookie-parser");
-// const jwt = require("jsonwebtoken");
-// const User = require("./models/User");
+
 
 const app = express();
 
